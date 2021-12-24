@@ -1,0 +1,22 @@
+<h1>Результат</h1>
+<% if @error%>
+   <p><%= @error %></p>
+<% else %>
+
+   <p><%= @x %></p>
+   <table >
+   <tr>
+     <th>Номер элемента</th>
+     <th>Значение</th>
+   </tr>
+
+   <% @array.each_with_index do |r, idx|%>
+
+   <tr>
+     <td><%= idx+1 %></td>
+     <td><%= r %></td>
+   </tr>
+
+   <% end %>
+   </table>
+<% end %>
